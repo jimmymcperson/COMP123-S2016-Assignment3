@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Student#: 300869273
  * Date Modified: June 16, 2016
  * Description: This is a demonstration of class diagrams, abstract classes/methods, and interfaces.
- * Version: 0.0.4 - Derived TerrestrialPlanet from Planet.  Added three interfaces.
+ * Version: 0.1.0 - Created instances in the Main method.
  * ==================================================================================================
  */
 namespace COMP123_s2016_Assignment3
@@ -35,6 +35,8 @@ namespace COMP123_s2016_Assignment3
          */
         public static void Main(string[] args)
         {
+            GiantPlanet giantPlanet = new GiantPlanet("Giant", 3000, 5000, "Gas");
+            TerrestrialPlanet terrestrialPlanet = new TerrestrialPlanet("Terrestrial", 1000, 4000, true);
         }
 
 
