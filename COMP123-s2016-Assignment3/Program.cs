@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Student#: 300869273
  * Date Modified: June 16, 2016
  * Description: This is a demonstration of class diagrams, abstract classes/methods, and interfaces.
- * Version: 0.0.3 - Derived GiantPlanet from Planet.
+ * Version: 0.0.4 - Derived TerrestrialPlanet from Planet.  Added three interfaces.
  * ==================================================================================================
  */
 namespace COMP123_s2016_Assignment3

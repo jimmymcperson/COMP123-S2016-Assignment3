@@ -7,38 +7,38 @@ namespace COMP123_s2016_Assignment3
 {
 
     /** <summary>
-     * This class defines a "Giant" variant of the Planet class.
+     * This class defines a "Terrestrial" variant of the Planet class.
      * </summary>
      * 
-     * @class GiantPlanet
+     * @class TerrestrialPlanet
      * @extends Planet
      */
-    public class GiantPlanet : Planet, IHasMoons, IHasRings
+    public class TerrestrialPlanet : Planet, IHasMoons, IHabitable
     {
 
         // PRIVATE INSTANCE VARIABLES =================================================================================================
 
-        private string _type;
+        private bool _oxygen;
 
         // PUBLIC PROPERTIES =================================================================================================
 
         // CONSTRUCTORS =================================================================================================
 
         /** <summary>
-        * This constructor takes either the string "Gas" or "Ice" and assigns it to the _type variable.
+        * This constructor takes a boolean oxygen and assigns it to the _oxygen variable.
         * It also uses takes a string, name; a double, diameter; and a double, mass; for the default constructor for the Planet class.
         * </summary>
         *
-        * @constructor GiantPlanet
+        * @constructor TerrestrialPlanet
         * @param {string} name
         * @param {double} diameter
         * @param {double} mass
-        * @param {string} type
+        * @param {bool} oxygen
         */
-        public GiantPlanet(string name, double diameter, double mass, string type)
+        public TerrestrialPlanet(string name, double diameter, double mass, bool oxygen)
             : base(name, diameter, mass)
         {
-            this._type = type;
+            this._oxygen = oxygen;
         }
 
         // PRIVATE METHODS =================================================================================================
@@ -46,15 +46,15 @@ namespace COMP123_s2016_Assignment3
         // PUBLIC METHODS =================================================================================================
 
         /** <summary>
-         * This method returns a True boolean if the MoonCount property is greater than zero.
+         * This method returns a True boolean if the _oxygen field is True.
          * </summary>
          *
-         * @method HasMoon
+         * @method Habitable
          * @returns {bool}
          */
-        public bool HasMoons()
+        public bool Habitable()
         {
-            if (this.MoonCount > 0)
+            if (this._oxygen == true)
             {
                 return true;
             }
@@ -65,15 +65,15 @@ namespace COMP123_s2016_Assignment3
         }
 
         /** <summary>
-         * This method returns a True boolean if the RingCount property is greater than zero.
+         * This method returns a True boolean if the MoonCount property is True.
          * </summary>
          *
-         * @method HasRings
+         * @method HasMoons
          * @returns {bool}
          */
-        public bool HasRings()
+        public bool HasMoons()
         {
-            if (this.RingCount > 0)
+            if (MoonCount > 0)
             {
                 return true;
             }
