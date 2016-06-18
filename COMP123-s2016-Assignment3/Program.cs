@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Student#: 300869273
  * Date Modified: June 16, 2016
  * Description: This is a demonstration of class diagrams, abstract classes/methods, and interfaces.
- * Version: 0.0.1 - Initial commit.
+ * Version: 0.0.2 - Added Planet class.
  * ==================================================================================================
  */
 namespace COMP123_s2016_Assignment3

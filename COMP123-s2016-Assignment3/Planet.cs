@@ -26,92 +26,158 @@ namespace COMP123_s2016_Assignment3
 
         // PUBLIC PROPERTIES =================================================================================================
 
+        /**<summary>
+        * This property reads the _diameter field.
+        * </summary>
+        *
+        * @property Diameter
+        */
         public double Diameter
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._diameter;
             }
         }
 
+        /**<summary>
+        * This property reads the _mass field.
+        * </summary>
+        *
+        * @property Mass
+        */
         public double Mass
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._mass;
             }
         }
 
+
+        /**<summary>
+        * This property reads/writes the _moonCount field.
+        * </summary>
+        *
+        * @property MoonCount
+        */
         public int MoonCount
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._moonCount;
             }
 
             set
             {
+                this.MoonCount = value;
             }
         }
 
+        /**<summary>
+        * This property reads the _name field.
+        * </summary>
+        *
+        * @property Name
+        */
         public string Name
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._name;
             }
         }
 
+        /**<summary>
+        * This property reads/writes the _orbitalPeriod field.
+        * </summary>
+        *
+        * @property OrbitalPeriod
+        */
         public double OrbitalPeriod
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._orbitalPeriod;
             }
 
             set
             {
+                this._orbitalPeriod = value;
             }
         }
 
+        /**<summary>
+        * This property reads/writes the _ringCount field.
+        * </summary>
+        *
+        * @property RingCount
+        */
         public int RingCount
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._ringCount;
             }
 
             set
             {
+                this._ringCount = value;
             }
         }
 
+        /**<summary>
+        * This property reads/writes the _rotationPeriod field.
+        * </summary>
+        *
+        * @property RotationPeriod
+        */
         public double RotationPeriod
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._rotationPeriod;
             }
 
             set
             {
+                this._rotationPeriod = value;
             }
         }
 
         // CONSTRUCTORS =================================================================================================
 
-        public Planet()
+        /** <summary>
+        * This constructor takes name, diameter, and mass as parameters and assigns them to the appropriate fields.
+        * </summary>
+        *
+        * @constructor Planet
+        * @params {string} name
+        * @params {double} diameter
+        * @params {double} mass
+        */
+        public Planet(string name, double diameter, double mass)
         {
-            throw new System.NotImplementedException();
+            this._name = name;
+            this._diameter = diameter;
+            this._mass = mass;
+
         }
 
         // PRIVATE METHODS =================================================================================================
 
         // PUBLIC METHODS =================================================================================================
 
-        public string ToString()
+        /** <summary>
+         * This method displays the _name, _diameter, and _mass fields.
+         * </summary>
+         *
+         * @method ToString
+         * @returns {string}
+         */
+        public override string ToString()
         {
-            throw new System.NotImplementedException();
+            return String.Format("*******************\nName: {0}\nDiameter: {1}\nMass: {2}\n*******************", this.Name, this.Diameter, this.Mass);
         }
     }
 }
